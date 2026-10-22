@@ -13,7 +13,7 @@ export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61594728122
 
 // Put approved assets in public/assets and set their root-relative paths here.
 // New teal A with amber barbell only. Do not substitute the original geometric A.
-export const LOGO_URL = '/assets/aptyr-barbell-logo.png';
+export const LOGO_URL = import.meta.env.BASE_URL + 'assets/aptyr-barbell-logo.png';
 export const SCREENSHOTS: { src: string; alt: string; label: string }[] = [
   { src: homeScreenshot, alt: 'Aptyr Home showing today’s Upper Strength workout, its estimated duration, and the planned exercises.', label: 'Your program' },
   { src: adaptScreenshot, alt: 'Aptyr Smart Adapt with Day off, Okay energy, 60 minutes, and Home equipment selected, above the Adjust My Workout button.', label: 'Your day' },

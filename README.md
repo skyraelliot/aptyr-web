@@ -1,6 +1,6 @@
 # Aptyr beta landing page
 
-Standalone React + TypeScript + Vite landing page. Plain CSS, no component libraries, analytics, form backend, or external font requests. Nothing has been deployed.
+Standalone React + TypeScript + Vite landing page. Plain CSS, no component libraries, analytics, form backend, or external font requests. Deployment is configured for GitHub Pages.
 
 ## Run locally
 
@@ -88,3 +88,9 @@ Screenshot verification: TypeScript and production build passed. All three image
 ## Final beta and social links
 
 The exact supplied TestFlight, Google Group, Google Form, Instagram, and Facebook URLs are configured. Android instructions direct testers to the Google Play opt-in link in the group. All external web links use target=_blank and rel=noopener noreferrer; internal navigation is unchanged. Beta and feedback buttons are enabled and pending-link messages are removed. TypeScript and production build passed. Headless Edge checks at 320, 390, 768, and 1440px confirmed all destinations, five enabled CTA links, zero disabled buttons, correct external-link attributes, and no horizontal overflow. Read-only requests to all five supplied URLs returned HTTP 200 (following redirects where applicable). No enrollment, group joining, form submission, or authenticated social access was attempted. Nothing was deployed.
+
+## GitHub Pages
+
+This repository has fresh, independent history and deploys to https://skyraelliot.github.io/aptyr-web/ using .github/workflows/pages.yml. Pushes to main and manual workflow dispatch install dependencies with npm ci, run the TypeScript/production build, and publish only dist/ using official GitHub Pages actions pinned to commit hashes. No private app credentials are needed.
+
+The Vite base is /aptyr-web/. Vite rewrites HTML and CSS asset references; the logo uses import.meta.env.BASE_URL. Local development and preview therefore use /aptyr-web/ too. Changing to a custom domain later requires a separate base-path and domain configuration update. No custom domain or DNS is configured here. Earlier verification notes above describe the source website's pre-deployment work.
