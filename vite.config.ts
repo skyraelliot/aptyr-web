@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/aptyr-web/',
+  // GitHub Pages serves the custom domain at its root.
+  base: '/',
 });
